@@ -2,14 +2,16 @@
 
 Adds a line to the composer pull-down that will insert:
 
-```
-[wrap=qrcode url=]
-[/wrap]
-```
-and will render a QR Code. If you leave `url=` blank, it will use the current page URL. You can also type whatever text you want in after `url=` to have that text rendered in the QR Code (tip: It doesn't have to be a URL, but does need to be enclosed in "quotes").
 
-It seems that due to limitations of the library you can have only one QR Code per post.
+    ```qrcode
+    delete this for URL of current page```
+
+and will render a QR Code. If you delete the starter text, a QRCode for the current page will be displayed; if the page changes, so will the QRCode. This means that a QRCode in a chat window will change depending on what page you were on when it was first displayed. 
+
+You can enter arbitrary text in the code block and that text will be represented in the QR code.
 
 Uses code from https://davidshimjs.github.io/qrcodejs/.
 
 Thanks to @falco and the [discourse-mermaid-theme-component](https://github.com/discourse/discourse-mermaid-theme-component) for inspiration and Best Practices.
+
+Another version of this plugin exists at https://github.com/literatecomputing/discourse-qrcode-wrap-theme-component that uses `[wrap]` rather than a code block. This version is a bit cleaner, but the other allows changing the size of the QR Code and serves as an example for how to write a theme component that uses a `[wrap]` block.

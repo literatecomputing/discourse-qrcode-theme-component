@@ -30,7 +30,7 @@ async function applyQrcode(element, key = "composer") {
   });
 
   qrcodes = element.querySelectorAll("pre[data-code-wrap=qrcode]");
-  qrcodes.forEach(async (qrcode, index) => {
+  qrcodes.forEach(async (qrcode) => {
     if (qrcode.dataset.processed) {
       return;
     }
@@ -38,6 +38,8 @@ async function applyQrcode(element, key = "composer") {
     const qr = document.createElement("div");
     qr.classList.add("qrcode");
     const url = code.innerHTML ? code.innerHTML : window.location.href;
+    // eslint doesn't like the way QRCode works.
+    /*eslint no-new: 0 */
     new window.QRCode(qr, url);
 
     code.innerHTML = null;
@@ -45,9 +47,6 @@ async function applyQrcode(element, key = "composer") {
     qrcode.appendChild(qr);
   });
 }
-
-let messageSeq = 0;
-let resolvers = {};
 
 export default apiInitializer("0.11.1", (api) => {
   api.addToolbarPopupMenuOptionsCallback(() => {

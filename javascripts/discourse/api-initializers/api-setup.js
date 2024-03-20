@@ -49,7 +49,7 @@ async function applyQrcode(element, key = "composer") {
 }
 
 export default apiInitializer("0.11.1", (api) => {
-  api.addToolbarPopupMenuOptionsCallback(() => {
+  api.addToolbarPopupMenuOption(() => {
     return {
       action: "insertqrcodesample",
       icon: "qrcode",
@@ -71,7 +71,7 @@ export default apiInitializer("0.11.1", (api) => {
           "\n```qrcode\n",
           "```\n",
           "qrcode_text",
-          { multiline: false }
+          { multiline: false },
         );
       },
     },
@@ -88,6 +88,6 @@ export default apiInitializer("0.11.1", (api) => {
       const id = helper ? `post_${helper.getModel().id}` : "composer";
       applyQrcode(elem, id);
     },
-    { id: "discourse-qrcode" }
+    { id: "discourse-qrcode" },
   );
 });

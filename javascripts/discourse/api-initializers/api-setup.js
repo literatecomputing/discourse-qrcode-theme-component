@@ -49,7 +49,7 @@ async function applyQrcode(element, key = "composer") {
 }
 
 export default apiInitializer("0.11.1", (api) => {
-  api.addToolbarPopupMenuOption(() => {
+  api.addComposerToolbarPopupMenuOption(() => {
     return {
       action: "insertqrcodesample",
       icon: "qrcode",

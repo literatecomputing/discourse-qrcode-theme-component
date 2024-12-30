@@ -1,5 +1,7 @@
 # Add QR Code
 
+Seems to be broken. Let me know if you'd like to use it.
+
 Adds a line to the composer pull-down that will insert:
 
 

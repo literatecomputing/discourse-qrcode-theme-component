@@ -3,7 +3,6 @@
   "component": true,
   "authors": "Jay Pfaffman",
   "about_url": "https://github.com/literatecomputing/discourse-qrcode-theme-component",
-  // "learn_more": "TODO",
   "assets": {
     "qrcode_js": "assets/qrcode.js"
   }

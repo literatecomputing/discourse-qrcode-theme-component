@@ -1,14 +1,11 @@
 # Add QR Code
 
-Seems to be broken. Let me know if you'd like to use it.
-
 Adds a line to the composer pull-down that will insert:
-
 
     ```qrcode
     delete this for URL of current page```
 
-and will render a QR Code. If you delete the starter text, a QRCode for the current page will be displayed; if the page changes, so will the QRCode. This means that a QRCode in a chat window will change depending on what page you were on when it was first displayed. 
+and will render a QR Code. If you delete the starter text, a QRCode for the current page will be displayed; if the page changes, so will the QRCode. This means that a QRCode in a chat window will change depending on what page you were on when it was first displayed.
 
 You can enter arbitrary text in the code block and that text will be represented in the QR code.
 

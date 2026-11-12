@@ -48,7 +48,7 @@ async function applyQrcode(element, key = "composer") {
   });
 }
 
-export default apiInitializer("0.11.1", (api) => {
+export default apiInitializer((api) => {
   api.addComposerToolbarPopupMenuOption(() => {
     return {
       action: "insertqrcodesample",
@@ -59,11 +59,10 @@ export default apiInitializer("0.11.1", (api) => {
 
   // this is a hack as applySurround expects a top level
   // composer key, not possible from a theme
-  window.I18n.translations[
-    window.I18n.locale
-  ].js.composer.qrcode_text = `delete this for URL of current page`;
+  window.I18n.translations[window.I18n.locale].js.composer.qrcode_text =
+    `delete this for URL of current page`;
 
-  api.modifyClass("controller:composer", {
+  api.modifyClass("service:composer", {
     pluginId: "discourse-qrcode",
     actions: {
       insertqrcodesample() {
@@ -71,7 +70,7 @@ export default apiInitializer("0.11.1", (api) => {
           "\n```qrcode\n",
           "```\n",
           "qrcode_text",
-          { multiline: false },
+          { multiline: false }
         );
       },
     },
@@ -88,6 +87,6 @@ export default apiInitializer("0.11.1", (api) => {
       const id = helper ? `post_${helper.getModel().id}` : "composer";
       applyQrcode(elem, id);
     },
-    { id: "discourse-qrcode" },
+    { id: "discourse-qrcode" }
   );
 });

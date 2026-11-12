@@ -1,6 +1,7 @@
 {
   "name": "QR Code Inserter",
   "component": true,
+  "theme_version": "2026.11.11.01",
   "authors": "Jay Pfaffman",
   "about_url": "https://github.com/literatecomputing/discourse-qrcode-theme-component",
   "assets": {

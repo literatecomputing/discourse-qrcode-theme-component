@@ -11,22 +11,11 @@
     "discourse": "npm:@discourse/types@2026.10.0-a5125163",
     "ember-content-mapper": "0.3.1",
     "eslint": "10.6.0",
-    "eslint-config-discourse": "^3.6.0",
     "lint-to-the-future": "^3.2.0",
     "lint-to-the-future-eslint": "^4.0.0",
+    "prettier": "3.8.1",
     "stylelint": "17.5.0",
     "typescript": "7.1.0-dev.20260930.4"
-  },
-  "dependencies": {
-    "prettier": "3.8.1"
-  },
-  "private": true,
-  "packageManager": "pnpm@12.11.2",
-  "engines": {
-    "node": ">= 22",
-    "npm": "please-use-pnpm",
-    "yarn": "please-use-pnpm",
-    "pnpm": "^12"
   },
   "scripts": {
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
@@ -40,5 +29,13 @@
     "lint:types": "tsc -b --runExternalCode",
     "lttf:ignore": "lint-to-the-future ignore",
     "update-skeleton": "pnpx @discourse/update-skeleton@latest"
+  },
+  "private": true,
+  "packageManager": "pnpm@12.11.2",
+  "engines": {
+    "node": ">= 22",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "pnpm": "^12"
   }
 }
